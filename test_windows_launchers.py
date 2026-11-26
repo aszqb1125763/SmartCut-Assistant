@@ -20,18 +20,11 @@ LAUNCHERS = (
     "启动（排错用）.bat",
     "启动SmartCut.bat",
 )
-REQUIRED_STUBS = (
-    "product_info.py",
-    "requirements.txt",
-    "constraints-runtime.txt",
-    "app_main.py",
-    "启动SmartCut.bat",
-    "brains/__init__.py",
-    "conf/decision.json",
-    "conf/coords_matrix.json",
-    "conf/spec_manifest.json",
-    "conf/editor_model.json",
-)
+ASCII_BOOTSTRAPS = {
+    "安装并启动.bat",
+    "安装到指定目录.bat",
+    "安装PR插件.bat",
+}
 
 
 class WindowsLauncherTests(unittest.TestCase):
@@ -44,10 +37,15 @@ class WindowsLauncherTests(unittest.TestCase):
                 self.assertEqual(data.count(b"\n"), data.count(b"\r\n"))
                 text = data.decode("utf-8")
                 self.assertNotIn('cd /d "%~dp0"', text.lower())
-                self.assertIn('pushd "%~dp0"', text.lower())
-                self.assertIn("popd", text.lower())
-                prefix = text.split("chcp 65001", 1)[0]
-                self.assertTrue(prefix.isascii())
+                if filename in ASCII_BOOTSTRAPS:
+                    self.assertTrue(text.isascii())
+                    self.assertNotIn("for %%", text.lower())
+                    self.assertIn("powershell.exe", text.lower())
+                else:
+                    self.assertIn('pushd "%~dp0"', text.lower())
+                    self.assertIn("popd", text.lower())
+                    prefix = text.split("chcp 65001", 1)[0]
+                    self.assertTrue(prefix.isascii())
 
     def test_release_normalizer_removes_bom_and_writes_crlf(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -62,12 +60,9 @@ class WindowsLauncherTests(unittest.TestCase):
             package = Path(temp) / "SmartCut 中文 空格 (A&B)"
             package.mkdir()
             shutil.copy2(ROOT / "安装并启动.bat", package / "安装并启动.bat")
-            (package / "installer.py").write_text(
-                "print('SMARTCUT_BATCH_OK')\n", encoding="utf-8")
-            for relative in REQUIRED_STUBS:
-                target = package / relative
-                target.parent.mkdir(parents=True, exist_ok=True)
-                target.touch()
+            (package / "setup_windows.ps1").write_text(
+                "Write-Output 'SMARTCUT_BATCH_OK'\nexit 0\n",
+                encoding="ascii")
             command = 'cmd.exe /d /s /c ""%s" --help"' % (
                 package / "安装并启动.bat")
             # The application installs a global no-console wrapper in some

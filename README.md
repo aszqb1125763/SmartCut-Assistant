@@ -1,6 +1,6 @@
 # SmartCut 智能剪辑助手
 
-当前版本：**1.1.5**。产品名称与版本的源码真源为 [product_info.py](product_info.py)。
+当前版本：**1.1.6**。产品名称与版本的源码真源为 [product_info.py](product_info.py)。
 
 SmartCut 是面向长视频、录播和游戏实况的 Windows 智能剪辑工具。它可以分析画面、对白、停顿和音频边界，生成可直接观看的视频，也可以把剪辑结果写入可继续编辑的 Adobe Premiere Pro 工程。
 
@@ -63,7 +63,7 @@ powershell -ExecutionPolicy Bypass -File .\setup_windows.ps1 -Check
 - [贡献指南](CONTRIBUTING.md)
 - [安全政策](SECURITY.md)
 - [更新记录](CHANGELOG.md)
-- [v1.1.5 发行说明](RELEASE_NOTES.md)
+- [v1.1.6 发行说明](RELEASE_NOTES.md)
 - [开源发布与离线包说明](OPEN_SOURCE_DECISIONS.md)
 
 使用 AI 帮助二次开发时，可先把 [开发与构建](docs/开发与构建.md) 交给 AI；其中包含模块入口、岗位合同、时间坐标、API 适配、Premiere 通信、测试选择与可直接使用的协作提示模板。

@@ -3,7 +3,7 @@
 
 PRODUCT_NAME = "SmartCut 智能剪辑助手"
 PRODUCT_ID = "SmartCutAssistant"
-VERSION = "1.1.5"
+VERSION = "1.1.6"
 COPYRIGHT = "Copyright © 2026 瓜子神教大主教、不无聊的子枫哥"
 
 ORIGINAL_CREATOR_NAME = "瓜子神教大主教"

@@ -1,4 +1,4 @@
-# SmartCut 1.1.5 runtime constraints.
+# SmartCut 1.1.6 runtime constraints.
 # Keep these versions aligned with the release-tested environment so a new
 # computer changes speed with its hardware, not the editing/subtitle behavior.
 anyio==4.16.0
