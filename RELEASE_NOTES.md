@@ -1,10 +1,16 @@
-# SmartCut 智能剪辑助手 v1.1.4
+# SmartCut 智能剪辑助手 v1.1.5
 
-这是项目首次正式公开的 MIT 源码版本。GitHub Release 提供 **source-bootstrap ZIP**：包含源码、教程、自动安装器和 Premiere 插件源码，不直接携带 EXE、Python 运行时、FFmpeg、模型或用户配置。
+这是 v1.1.4 首次公开版本的 Windows 安装兼容补丁。GitHub Release 仍提供 **source-bootstrap ZIP**：包含源码、教程、自动安装器和 Premiere 插件源码，不直接携带 EXE、Python 运行时、FFmpeg、模型或用户配置。
+
+## 本次修复
+
+- 修复部分 Windows 电脑把批处理中的 `for %%F` 错误解析成 `%F`、从而误报安装包缺文件的问题。
+- 所有批处理改为 UTF-8 无 BOM、CRLF 换行，并先切换到 UTF-8 代码页再输出中文。
+- 安装、启动和 PR 插件入口支持本地磁盘及 UNC 网络共享路径；仍建议安装时先完整解压到本地磁盘。
 
 ## 安装
 
-1. 下载 `SmartCutAssistant_v1.1.4.zip` 和同名 `.sha256` 文件。
+1. 下载 `SmartCutAssistant_v1.1.5.zip` 和同名 `.sha256` 文件。
 2. 完整解压 ZIP，不要直接在压缩包内运行。
 3. 双击 `安装并启动.bat`；需要自选安装位置时双击 `安装到指定目录.bat`。
 4. 首次安装需要联网。安装器会准备 Python 环境、依赖、FFmpeg、所选语音/语言模型和 Premiere 插件。
@@ -12,8 +18,8 @@
 PowerShell 校验下载完整性：
 
 ```powershell
-Get-FileHash .\SmartCutAssistant_v1.1.4.zip -Algorithm SHA256
-Get-Content .\SmartCutAssistant_v1.1.4.zip.sha256
+Get-FileHash .\SmartCutAssistant_v1.1.5.zip -Algorithm SHA256
+Get-Content .\SmartCutAssistant_v1.1.5.zip.sha256
 ```
 
 两处哈希值必须一致；不一致时请删除文件并重新下载。

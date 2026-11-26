@@ -78,6 +78,21 @@ def _ship_list():
 
 INCLUDE = _ship_list()
 
+
+def normalize_windows_batch(path):
+    """Write a CMD launcher as UTF-8 without BOM and with CRLF lines.
+
+    Older Windows command processors can treat a UTF-8 BOM as part of the
+    first command, and LF-only batch files can then be tokenized incorrectly.
+    Release staging normalizes every launcher instead of depending on the
+    developer's Git checkout settings.
+    """
+    with open(path, "rb") as handle:
+        raw = handle.read()
+    text = raw.decode("utf-8-sig").replace("\r\n", "\n").replace("\r", "\n")
+    with open(path, "wb") as handle:
+        handle.write(text.replace("\n", "\r\n").encode("utf-8"))
+
 # 打包时写一份「干净的默认配置」，不要把本机的导出路径带给别人
 CLEAN_CONF = {
     "conf/settings.json": json.dumps({"model": "large-v3"}, ensure_ascii=False, indent=2) + "\n",
@@ -426,6 +441,13 @@ def main():
                  "装好后：设置… → BGM 曲库，选你放 BGM 的文件夹。\n"
                  "自检：.venv\\Scripts\\python.exe selftest_cut.py\n"
                  % (RELEASE_VERSION, _t.strftime("%Y-%m-%d %H:%M")))
+
+    # CMD launchers must work even when this build was made from an LF-only
+    # checkout.  Keep the public ZIP independent of Git autocrlf settings.
+    for root, _dirs, files in os.walk(stage):
+        for filename in files:
+            if filename.lower().endswith((".bat", ".cmd")):
+                normalize_windows_batch(os.path.join(root, filename))
 
     # 顺手检查有没有漏收的 .py（防止以后加了新模块忘了加进清单）
     src_py = {f for f in os.listdir(BASE)

@@ -44,7 +44,7 @@ class ProductReleaseTests(unittest.TestCase):
     def test_product_metadata_is_canonical(self):
         self.assertEqual("SmartCut 智能剪辑助手", product_info.PRODUCT_NAME)
         self.assertEqual("SmartCutAssistant", product_info.PRODUCT_ID)
-        self.assertEqual("1.1.4", product_info.VERSION)
+        self.assertEqual("1.1.5", product_info.VERSION)
         self.assertIn("瓜子神教大主教", product_info.COPYRIGHT)
         self.assertIn("不无聊的子枫哥", product_info.COPYRIGHT)
         self.assertNotIn("DeepSeek", product_info.COPYRIGHT)
