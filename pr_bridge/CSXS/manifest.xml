@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 智能剪辑 PR 桥：CEP 扩展清单
+     面板在 PR 里读本机 sync_server.py 的剪辑单，按 in/out 插进当前序列。 -->
+<ExtensionManifest Version="7.0"
+                   ExtensionBundleId="com.smartcut.prbridge"
+                   ExtensionBundleVersion="0.5.1"
+                   ExtensionBundleName="智能剪辑 PR 桥">
+  <ExtensionList>
+    <Extension Id="com.smartcut.prbridge.panel" Version="0.5.1" />
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="PPRO" Version="[14.0,99.9]" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="9.0" />
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.smartcut.prbridge.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./index.html</MainPath>
+          <ScriptPath>./jsx/host.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--enable-nodejs</Parameter>
+            <Parameter>--mixed-context</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>智能剪辑桥</Menu>
+          <Geometry>
+            <Size>
+              <Height>460</Height>
+              <Width>380</Width>
+            </Size>
+            <MinSize>
+              <Height>320</Height>
+              <Width>300</Width>
+            </MinSize>
+          </Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>

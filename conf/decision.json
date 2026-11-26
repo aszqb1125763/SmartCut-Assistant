@@ -1,0 +1,17 @@
+{
+ "schema": "smartcut.decision",
+ "schema_version": 1,
+ "spec_version": "2026-11-24.1",
+ "notes": "所有权重、均衡、思考都属于本地模型。小脑和编排层只许'读参数'，不许自己发明权重。改这里就是改决策，不需要动代码。",
+ "candidate_rank": {
+  "semantic": 0.7,
+  "axes": 0.3,
+  "note": "候选排序时：语义权重 0.7、三轴权重 0.3。这是模型的决策参数，不是小脑的。"
+ },
+ "gate": {
+  "max_p0": 2,
+  "max_relative_over": 0.55,
+  "max_gray_ratio": 0.40,
+  "note": "交付闸的容忍度：同样是模型/人的决策参数。"
+ }
+}

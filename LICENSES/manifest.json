@@ -1,0 +1,809 @@
+{
+  "schema": 1,
+  "generated_at": "2026-11-25T23:33:27.336038+00:00",
+  "generator": "build_tools/generate_compliance.py",
+  "distribution_scope": {
+    "mode": "source-bootstrap",
+    "description": "默认 GitHub Release ZIP 分发项目 MIT 源码和自动安装器；首次运行由用户机器从上游来源安装 Python/PyPI 依赖和可选组件。",
+    "included": [
+      "MIT-licensed project source",
+      "bootstrap installers and Premiere extension source",
+      "documentation and project-maintained knowledge-base files"
+    ],
+    "excluded": [
+      "智能剪辑助手.exe",
+      "_internal/",
+      ".venv/",
+      "runtime/",
+      "bin/",
+      "models/"
+    ],
+    "offline_binary_release_gate": "LICENSES/manifest.json complete=true is required before publishing an EXE/_internal or other bundled native-runtime release."
+  },
+  "complete": false,
+  "components": [
+    {
+      "name": "altgraph",
+      "version": "0.17.5",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/altgraph/LICENSE"
+      ],
+      "installed_metadata_sha256": "c9ea3aee795daf070e68ec04a75636dafd4675178a9d72d5db57667dba2c5475"
+    },
+    {
+      "name": "anyio",
+      "version": "4.16.0",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/anyio/LICENSE"
+      ],
+      "installed_metadata_sha256": "7454f35f7df09c9640e96dd813c8e7c58e68cf836ebf4f00666ad4b428f34aeb"
+    },
+    {
+      "name": "av",
+      "version": "19.0.2",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/av/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "66ed3fb9e04454a41d03f674d6a564ae17b823e2e09c0c808144f8f77badf535"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "type": "python-distribution",
+      "declared_license": "MIT-0",
+      "license_files": [
+        "LICENSES/python/cffi/LICENSE"
+      ],
+      "installed_metadata_sha256": "ba532cd8956ba0da95f39909f1ae34e9d97f283ebf8a3f2368befa2a35f184b1"
+    },
+    {
+      "name": "click",
+      "version": "8.5.1",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/click/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "39e08a0bb7eb8ed9fab6a9878cff45db57f5be732d8ef75cbfd1623c810dcaf6"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "type": "python-distribution",
+      "declared_license": "",
+      "license_files": [
+        "LICENSES/python/colorama/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "676cdab5b5626e406a687a6f7260a16625d6f127c95632cb6fd65f4085eb0024"
+    },
+    {
+      "name": "ctranslate2",
+      "version": "4.9.0",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/supplemental/python/ctranslate2/4.9.0/LICENSE"
+      ],
+      "installed_metadata_sha256": "fb481b548878f2b4299a0d27103848aa462f51c25479e48c397e03cba4777b86",
+      "supplemental_license_source": {
+        "url": "https://raw.githubusercontent.com/OpenNMT/CTranslate2/v4.9.0/LICENSE",
+        "sha256": "54aa79d9fe3c09e67a16dcd95b9e88676405a6ec174efda31036983cf7672ecb",
+        "reference": "OpenNMT/CTranslate2 tag v4.9.0"
+      }
+    },
+    {
+      "name": "cython",
+      "version": "3.3.1",
+      "type": "python-distribution",
+      "declared_license": "Apache-2.0",
+      "license_files": [
+        "LICENSES/supplemental/python/cython/3.3.1/COPYING.txt",
+        "LICENSES/supplemental/python/cython/3.3.1/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "d0111f2598e4326e5e72cba975508b861a282d515ce0dbe17d64bcf0a6cd5671",
+      "supplemental_license_source": {
+        "url": "https://files.pythonhosted.org/packages/99/ca/18e324972e5cac914816fdd7bb03e19a455b90039c277a538f7781b50c85/cython-3.3.1.tar.gz",
+        "sha256": "e0e45989e821bef6aa9ae15c7d583ab5e055f7406c4b3624e49e06d24e90375a",
+        "reference": "PyPI cython 3.3.1 source distribution"
+      }
+    },
+    {
+      "name": "faster-whisper",
+      "version": "1.2.1",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/faster-whisper/LICENSE"
+      ],
+      "installed_metadata_sha256": "a5cafae75969ee9cadda0b62563ffe95270abd9cc054323fea5a9725ad4e76e1"
+    },
+    {
+      "name": "filelock",
+      "version": "4.2.12",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/filelock/LICENSE"
+      ],
+      "installed_metadata_sha256": "8e98ff0f11a3ee05050105ee9931bb4246c8024344502f8e7c76d4e1b12ed136"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "type": "python-distribution",
+      "declared_license": "Apache 2.0",
+      "license_files": [
+        "LICENSES/supplemental/python/flatbuffers/25.12.19/LICENSE"
+      ],
+      "installed_metadata_sha256": "65b041d0111f81aa7d26f8e77b7866c71528ca2f262576fce09831f3f29531c0",
+      "supplemental_license_source": {
+        "url": "https://raw.githubusercontent.com/google/flatbuffers/v25.12.19/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "reference": "google/flatbuffers tag v25.12.19"
+      }
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/fsspec/LICENSE"
+      ],
+      "installed_metadata_sha256": "28e7cc9a7f303d52db3efc76b7303e5f4293e0563253f456f732758ddca5c7a7"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/h11/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "f21b41b5fec06436c8cab08f0fc43a07b716f33720e8d4e3cfc607841846421f"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.8.0",
+      "type": "python-distribution",
+      "declared_license": "Apache-2.0",
+      "license_files": [
+        "LICENSES/python/hf-xet/LICENSE"
+      ],
+      "installed_metadata_sha256": "bfb956e9a823066005ef403d1029670a9d947c3493223f4fb70cab4353d1d8d0"
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.16.2",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/httpcore2/LICENSE.md"
+      ],
+      "installed_metadata_sha256": "17669598dfc33894b4e2f24cb2f7efb0094431d1045678bb0914c8659680fb14"
+    },
+    {
+      "name": "httpx2",
+      "version": "2.16.2",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/httpx2/LICENSE.md"
+      ],
+      "installed_metadata_sha256": "7152b29680f18e03ad14ad0b487160b64f0460cfec87a18604174705c1e06ab6"
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "2.4.0",
+      "type": "python-distribution",
+      "declared_license": "Apache-2.0",
+      "license_files": [
+        "LICENSES/python/huggingface-hub/LICENSE"
+      ],
+      "installed_metadata_sha256": "6eec3a33e15c3dde3f652a0bfae6cbce74d038566499de0a2094d6ffd229c508"
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/idna/LICENSE.md"
+      ],
+      "installed_metadata_sha256": "5068b6f36bb6996e98bcd355b309da31961ec40285629cdd9daadac1d09f2d38"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.5",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "license_files": [
+        "LICENSES/python/numpy/03_LICENSE",
+        "LICENSES/python/numpy/04_LICENSE",
+        "LICENSES/python/numpy/06_LICENSE.md",
+        "LICENSES/python/numpy/07_LICENSE.md",
+        "LICENSES/python/numpy/08_LICENSE.md",
+        "LICENSES/python/numpy/09_LICENSE.md",
+        "LICENSES/python/numpy/10_LICENSE.md",
+        "LICENSES/python/numpy/11_LICENSE.md",
+        "LICENSES/python/numpy/12_LICENSE.md",
+        "LICENSES/python/numpy/13_LICENSE.md",
+        "LICENSES/python/numpy/15_LICENSE.txt",
+        "LICENSES/python/numpy/16_LICENSE.txt",
+        "LICENSES/python/numpy/COPYING",
+        "LICENSES/python/numpy/LICENSE",
+        "LICENSES/python/numpy/LICENSE.md",
+        "LICENSES/python/numpy/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "c941197168ed75cb9818443d8aca53f29a46f0373d7edf42a03e0469aa3a6e28"
+    },
+    {
+      "name": "nvidia-cublas-cu12",
+      "version": "12.9.2.10",
+      "type": "python-distribution",
+      "declared_license": "LicenseRef-NVIDIA-Proprietary",
+      "license_files": [
+        "LICENSES/python/nvidia-cublas-cu12/License.txt"
+      ],
+      "installed_metadata_sha256": "7d66a3ce6c81dc674581f2d1957935aa15adb88c0f30cf2fae52887d50cec366"
+    },
+    {
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.9.86",
+      "type": "python-distribution",
+      "declared_license": "LicenseRef-NVIDIA-Proprietary",
+      "license_files": [
+        "LICENSES/python/nvidia-cuda-nvrtc-cu12/License.txt"
+      ],
+      "installed_metadata_sha256": "55ccc7f3c67d0874b4914ac122f7061d4f07fb7db4faf30a11bd1f7d85e2176d"
+    },
+    {
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.28.1.4",
+      "type": "python-distribution",
+      "declared_license": "LicenseRef-NVIDIA-Proprietary",
+      "license_files": [
+        "LICENSES/python/nvidia-cudnn-cu12/LICENSE"
+      ],
+      "installed_metadata_sha256": "b4812612dc4ffc5f0d727327f713d87fd5bff5154000aa6aaa536930aabdd21b"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.32.0",
+      "type": "python-distribution",
+      "declared_license": "MIT License",
+      "license_files": [
+        "LICENSES/python/onnxruntime/LICENSE",
+        "LICENSES/python/onnxruntime/ThirdPartyNotices.txt"
+      ],
+      "installed_metadata_sha256": "8cbf842dcd89974176021532cce5a95909ea20a9d027c434fd44f033b654700e"
+    },
+    {
+      "name": "opencc-python-reimplemented",
+      "version": "0.1.7",
+      "type": "python-distribution",
+      "declared_license": "Apache License",
+      "license_files": [
+        "LICENSES/python/opencc-python-reimplemented/LICENSE.txt",
+        "LICENSES/python/opencc-python-reimplemented/NOTICE.txt"
+      ],
+      "installed_metadata_sha256": "3fd6c12edb1c72e57f49fd7fef117ba811350ad0be8f790a0f182b1867dff63a"
+    },
+    {
+      "name": "opencv-python-headless",
+      "version": "5.1.0.95",
+      "type": "python-distribution",
+      "declared_license": "Apache 2.0",
+      "license_files": [
+        "LICENSES/python/opencv-python-headless/LICENSE-3RD-PARTY.txt",
+        "LICENSES/python/opencv-python-headless/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "542ca5d9eadebb25c3e0e05a5cd6717fd1534753ba8f9dff56df796e60d074a0"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "type": "python-distribution",
+      "declared_license": "Apache-2.0 OR BSD-2-Clause",
+      "license_files": [
+        "LICENSES/python/packaging/LICENSE",
+        "LICENSES/python/packaging/LICENSE.APACHE",
+        "LICENSES/python/packaging/LICENSE.BSD"
+      ],
+      "installed_metadata_sha256": "555e3b3265939c473a5659d01568b4928d6dced7303c01ebfe3855ff3a7a9c56"
+    },
+    {
+      "name": "pefile",
+      "version": "2024.8.26",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/pefile/LICENSE"
+      ],
+      "installed_metadata_sha256": "0a419b81d8c58d70607d68a12243544dda695a8d9514a240ac26d8db1c5abfa6"
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0",
+      "type": "python-distribution",
+      "declared_license": "MIT-CMU",
+      "license_files": [
+        "LICENSES/python/pillow/LICENSE"
+      ],
+      "installed_metadata_sha256": "7058c9feb34e4ff431aa9f36042c828bb8c693e6ee0c71bc35bb5b85f4060b11"
+    },
+    {
+      "name": "pip",
+      "version": "26.3",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/pip/03_LICENSE",
+        "LICENSES/python/pip/04_LICENSE",
+        "LICENSES/python/pip/05_LICENSE",
+        "LICENSES/python/pip/06_LICENSE",
+        "LICENSES/python/pip/07_LICENSE",
+        "LICENSES/python/pip/08_LICENSE",
+        "LICENSES/python/pip/09_LICENSE",
+        "LICENSES/python/pip/10_LICENSE",
+        "LICENSES/python/pip/11_LICENSE",
+        "LICENSES/python/pip/12_LICENSE",
+        "LICENSES/python/pip/13_LICENSE",
+        "LICENSES/python/pip/18_LICENSE.txt",
+        "LICENSES/python/pip/19_LICENSE.txt",
+        "LICENSES/python/pip/20_LICENSE.txt",
+        "LICENSES/python/pip/COPYING",
+        "LICENSES/python/pip/LICENSE",
+        "LICENSES/python/pip/LICENSE.APACHE",
+        "LICENSES/python/pip/LICENSE.BSD",
+        "LICENSES/python/pip/LICENSE.md",
+        "LICENSES/python/pip/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "2f2bc3e9e0a5a1c636a3b0ca191fcfd1afd5cbbc8db91d2facad263d1c0e043e"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2",
+      "type": "python-distribution",
+      "declared_license": "3-Clause BSD License",
+      "license_files": [
+        "LICENSES/python/protobuf/LICENSE"
+      ],
+      "installed_metadata_sha256": "53966b31725df5557742a914fb1aebaf611162591da199407f9949c3b6e7f9ef"
+    },
+    {
+      "name": "pyclipper",
+      "version": "1.4.0",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/pyclipper/LICENSE"
+      ],
+      "installed_metadata_sha256": "a774f0884fdf3bffb8efaf3269c1b20ed8d05571aece47fed9127339090f9232"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.12",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/pycparser/LICENSE"
+      ],
+      "installed_metadata_sha256": "0c1365651b5d562308b41e8d07dade893accbf703898a99e975c18592d0dab05"
+    },
+    {
+      "name": "pyinstaller",
+      "version": "6.22.3",
+      "type": "python-distribution",
+      "declared_license": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)",
+      "license_files": [
+        "LICENSES/python/pyinstaller/COPYING.txt"
+      ],
+      "installed_metadata_sha256": "5bcbb5efc73f47b68efc128b6730fc9a029fd8d2e335331bbc8649167b2efc24"
+    },
+    {
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.10",
+      "type": "python-distribution",
+      "declared_license": "",
+      "license_files": [
+        "LICENSES/python/pyinstaller-hooks-contrib/LICENSE"
+      ],
+      "installed_metadata_sha256": "2ec09b3e1485af7750e39f14108fcb82763e2a2f2bcf0cab8f8d4f32b3a2cacd"
+    },
+    {
+      "name": "pypinyin",
+      "version": "0.55.0",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/pypinyin/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "238de967ed072688e1fe9a3af552b50f7ebf1498953f2ef4bc9067fcc455a9f7"
+    },
+    {
+      "name": "pyside6",
+      "version": "6.12.0",
+      "type": "python-distribution",
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_files": [
+        "LICENSES/python/pyside6/LicenseRef-Qt-Commercial.txt"
+      ],
+      "installed_metadata_sha256": "bba89ef18c660e9a2b7f041bbfa6106b77cdbcd66e1f83d08579b1ca5f1ad408"
+    },
+    {
+      "name": "pyside6-addons",
+      "version": "6.12.0",
+      "type": "python-distribution",
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_files": [
+        "LICENSES/python/pyside6-addons/LicenseRef-Qt-Commercial.txt"
+      ],
+      "installed_metadata_sha256": "660625a6c78c4262b71dfb8eeca8056bed0598b7a3f7e95b7d11f9ea755d3eb8"
+    },
+    {
+      "name": "pyside6-essentials",
+      "version": "6.12.0",
+      "type": "python-distribution",
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_files": [
+        "LICENSES/python/pyside6-essentials/LicenseRef-Qt-Commercial.txt"
+      ],
+      "installed_metadata_sha256": "33071a6fe44152e90d613b929d22cfa9d76f6de992566400e2f75b0f56a2c0df"
+    },
+    {
+      "name": "pyside6-pdf",
+      "version": "6.12.0.140",
+      "type": "python-distribution",
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_files": [
+        "LICENSES/python/pyside6-pdf/LicenseRef-Qt-Commercial.txt"
+      ],
+      "installed_metadata_sha256": "bc25bdc25d7f94ed1625fb38d50aaf1f87d7c393c507ab276de40f545805b918"
+    },
+    {
+      "name": "pyside6-webengine",
+      "version": "6.12.0.140",
+      "type": "python-distribution",
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_files": [
+        "LICENSES/python/pyside6-webengine/LicenseRef-Qt-Commercial.txt"
+      ],
+      "installed_metadata_sha256": "d4cf213ebacd0b6bfceceaa90f94d44ee92d84daa7e01c4c3523a2885836fb9c"
+    },
+    {
+      "name": "pytoshop",
+      "version": "1.2.1",
+      "type": "python-distribution",
+      "declared_license": "BSD license",
+      "license_files": [
+        "LICENSES/python/pytoshop/LICENSE"
+      ],
+      "installed_metadata_sha256": "3f8bc0bf4bdb1da5966c1107d9f869df4df1c962532eb11a692ce012e23a28ff"
+    },
+    {
+      "name": "pywin32-ctypes",
+      "version": "0.2.3",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/pywin32-ctypes/LICENSE.txt"
+      ],
+      "installed_metadata_sha256": "1f86e862d3b53a1bdee22e4bc05524297bd00793d1b69f9fe172f4a65cd9142b"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/pyyaml/LICENSE"
+      ],
+      "installed_metadata_sha256": "455967b77340411303e6c2b52049791cb650017f26b5e0513687aac1e8a8dc3c"
+    },
+    {
+      "name": "rapidocr-onnxruntime",
+      "version": "1.2.3",
+      "type": "python-distribution",
+      "declared_license": "Apache-2.0",
+      "license_files": [
+        "LICENSES/supplemental/python/rapidocr-onnxruntime/1.2.3/LICENSE"
+      ],
+      "installed_metadata_sha256": "88ce5afd1d92472e0553988b8e83b8db9327abbecbc6e9e3ff2139a4d859abc9",
+      "supplemental_license_source": {
+        "url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/4b45d0fc8f6352cddfaf7b69f64b512e557c6118/LICENSE",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "reference": "RapidAI/RapidOCR LICENSE commit 4b45d0f (2021-03-01), predates PyPI 1.2.3 release"
+      }
+    },
+    {
+      "name": "ruff",
+      "version": "0.17.6",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/ruff/LICENSE"
+      ],
+      "installed_metadata_sha256": "69a5d979d9c6f3ff487d21a301b8ea10fb1daedea21cd5bd678b99c5f4aec78d"
+    },
+    {
+      "name": "setuptools",
+      "version": "84.2.1",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/setuptools/02_LICENSE",
+        "LICENSES/python/setuptools/03_LICENSE",
+        "LICENSES/python/setuptools/04_LICENSE",
+        "LICENSES/python/setuptools/05_LICENSE",
+        "LICENSES/python/setuptools/06_LICENSE",
+        "LICENSES/python/setuptools/07_LICENSE",
+        "LICENSES/python/setuptools/08_LICENSE",
+        "LICENSES/python/setuptools/09_LICENSE",
+        "LICENSES/python/setuptools/14_NOTICE",
+        "LICENSES/python/setuptools/LICENSE",
+        "LICENSES/python/setuptools/LICENSE.APACHE",
+        "LICENSES/python/setuptools/LICENSE.BSD",
+        "LICENSES/python/setuptools/LICENSE.txt",
+        "LICENSES/python/setuptools/NOTICE"
+      ],
+      "installed_metadata_sha256": "711751121edda3527f7ae654c85fa5a6bea824c67cdf8d09fb6293fb665a36ad"
+    },
+    {
+      "name": "shapely",
+      "version": "2.2.0",
+      "type": "python-distribution",
+      "declared_license": "BSD-3-Clause",
+      "license_files": [
+        "LICENSES/python/shapely/LICENSE.txt",
+        "LICENSES/python/shapely/LICENSE_GEOS",
+        "LICENSES/python/shapely/LICENSE_win32"
+      ],
+      "installed_metadata_sha256": "cd8304baa260dbdbf4f39cc493d2c10ad05f5e1e6ff9096e1a99d074f03ed22e"
+    },
+    {
+      "name": "shiboken6",
+      "version": "6.12.0",
+      "type": "python-distribution",
+      "declared_license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+      "license_files": [
+        "LICENSES/python/shiboken6/LicenseRef-Qt-Commercial.txt"
+      ],
+      "installed_metadata_sha256": "011cbc4415ade0c4e502e8f229fe2175e54381a316c94b483262eee9edca88fe"
+    },
+    {
+      "name": "soundcard",
+      "version": "0.4.6",
+      "type": "python-distribution",
+      "declared_license": "BSD 3-clause",
+      "license_files": [
+        "LICENSES/python/soundcard/LICENSE"
+      ],
+      "installed_metadata_sha256": "8fc9e3b9484f2891a8124c0ca8a26ce576042d0b5bf66a5f2cffd7d81e2c0774"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "type": "python-distribution",
+      "declared_license": "",
+      "license_files": [
+        "LICENSES/supplemental/python/tokenizers/0.23.3/LICENSE"
+      ],
+      "installed_metadata_sha256": "db7a48dcde20de169686d127b28dd134621c97da2c1aee153ecf6b53391e3827",
+      "supplemental_license_source": {
+        "url": "https://files.pythonhosted.org/packages/e0/7c/2cabb2174e772636683008f2c5621949b645da7d303c596589e84516a184/tokenizers-0.23.3.tar.gz",
+        "sha256": "cded33237c77caeef62944d32aa9a7ef42bdce2b3497e18d137e072a8c4be438",
+        "reference": "PyPI tokenizers 0.23.3 source distribution"
+      }
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "type": "python-distribution",
+      "declared_license": "MPL-2.0 AND MIT",
+      "license_files": [
+        "LICENSES/python/tqdm/LICENCE"
+      ],
+      "installed_metadata_sha256": "809a44f2435347f64c484865973f67ea4b2176d68aa5d4d545915d23a415bd8c"
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.5",
+      "type": "python-distribution",
+      "declared_license": "MIT",
+      "license_files": [
+        "LICENSES/python/truststore/LICENSE"
+      ],
+      "installed_metadata_sha256": "4d79337a2679a8cae53a9b97cffdcb2c5222dca3e6d165d6e29e34878206078a"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "type": "python-distribution",
+      "declared_license": "PSF-2.0",
+      "license_files": [
+        "LICENSES/python/typing-extensions/LICENSE"
+      ],
+      "installed_metadata_sha256": "b42d7f0f53bad7cc3ed8a8d2da09f1fa656e91d59bbbbca10a02626888706ff2"
+    },
+    {
+      "name": "Qt for Python / Qt runtime",
+      "version": "6.12.0",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "尚未收齐最终打包 Qt 模块的逐模块第三方声明，且需在最终瘦身构建后重新核对 DLL 清单。",
+      "source": "https://github.com/qtproject/pyside-pyside-setup/tree/v6.12.0",
+      "license_files": [
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/LGPL-3.0-only.txt",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/GPL-2.0-only.txt",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/GPL-3.0-only.txt",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/Qt-GPL-exception-1.0.txt",
+        "LICENSES/manual/qt-pyside-6.12.0/sources/pyside6/COPYING",
+        "LICENSES/manual/qt-pyside-6.12.0/sources/shiboken6/COPYING"
+      ],
+      "file_sha256": {
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/LGPL-3.0-only.txt": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/GPL-2.0-only.txt": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/GPL-3.0-only.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/Qt-GPL-exception-1.0.txt": "40678d338ce53cd93f8b22b281a2ecbcaa3ee65ce60b25ffb0c462b0530846b2",
+        "LICENSES/manual/qt-pyside-6.12.0/sources/pyside6/COPYING": "3700b1c56fae3813dfaaef1cba101b6ec108167f36b19f4b2cc8824cc829aa2b",
+        "LICENSES/manual/qt-pyside-6.12.0/sources/shiboken6/COPYING": "9bf82b3636570e28118ee558ddab479b8f183d3e20327b7685a7479df52d6493"
+      }
+    },
+    {
+      "name": "ONNX Runtime native runtime",
+      "version": "1.32.0",
+      "type": "native-runtime",
+      "complete": true,
+      "reason": "",
+      "source": "installed onnxruntime 1.32.0 wheel",
+      "license_files": [
+        "LICENSES/python/onnxruntime/LICENSE",
+        "LICENSES/python/onnxruntime/ThirdPartyNotices.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/python/onnxruntime/LICENSE": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674",
+        "LICENSES/python/onnxruntime/ThirdPartyNotices.txt": "bf8073fd6a112ac2a656bb60799652127e881689e51d37ad20df446cd5188b2d"
+      }
+    },
+    {
+      "name": "OpenCV native runtime and bundled videoio FFmpeg",
+      "version": "5.1.0.95",
+      "type": "native-runtime",
+      "complete": true,
+      "reason": "",
+      "source": "installed opencv-python-headless 5.1.0.95 wheel",
+      "license_files": [
+        "LICENSES/python/opencv-python-headless/LICENSE.txt",
+        "LICENSES/python/opencv-python-headless/LICENSE-3RD-PARTY.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/python/opencv-python-headless/LICENSE.txt": "edef0fac1eb08d29d34563f724742e078da2513e196133a12c6ad9ff01e26107",
+        "LICENSES/python/opencv-python-headless/LICENSE-3RD-PARTY.txt": "161002b0db58605237b44519c36b693520c43a531bb3a35c2ef0eea1842694ba"
+      }
+    },
+    {
+      "name": "PyAV and linked FFmpeg libraries",
+      "version": "19.0.2",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "PyAV 自身 BSD 文本已收集，但 wheel 链接的 FFmpeg 构建选项、对应许可证和源码提供方式尚未核对。",
+      "source": "installed av 19.0.2 wheel",
+      "license_files": [
+        "LICENSES/python/av/LICENSE.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/python/av/LICENSE.txt": "f32ebcb6007dcc05eea369b3820e6391b0a7ef1ed763f30f1aca15dfdbacbe96"
+      }
+    },
+    {
+      "name": "CTranslate2 native runtime and Intel OpenMP",
+      "version": "4.9.0",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "CTranslate2 MIT 文本已收集，但随 wheel 分发的 Intel OpenMP 及其他二进制依赖声明尚未收齐。",
+      "source": "https://github.com/OpenNMT/CTranslate2/tree/v4.9.0",
+      "license_files": [
+        "LICENSES/supplemental/python/ctranslate2/4.9.0/LICENSE"
+      ],
+      "file_sha256": {
+        "LICENSES/supplemental/python/ctranslate2/4.9.0/LICENSE": "54aa79d9fe3c09e67a16dcd95b9e88676405a6ec174efda31036983cf7672ecb"
+      }
+    },
+    {
+      "name": "CPython embeddable runtime",
+      "version": "3.14.4",
+      "type": "native-runtime",
+      "complete": true,
+      "reason": "",
+      "source": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip",
+      "license_files": [
+        "LICENSES/manual/cpython-3.14.4/LICENSE.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/manual/cpython-3.14.4/LICENSE.txt": "935cf13e19f8c31b497d20b05d73623431a226b230c3599bc30fa3348979bc68"
+      },
+      "source_sha256": "cda80a9b1e75c0f1b4f9872ca1b417f0d19bce32facc811aea9180e70fad5fb9",
+      "verified_files": [
+        "python.exe",
+        "pythonw.exe",
+        "python3.dll",
+        "python314.dll",
+        "LICENSE.txt",
+        "libcrypto-3.dll",
+        "libssl-3.dll"
+      ]
+    },
+    {
+      "name": "Silero VAD ONNX model",
+      "version": "v6 (faster-whisper 1.2.1 asset)",
+      "type": "model",
+      "complete": true,
+      "reason": "",
+      "source": "https://raw.githubusercontent.com/SYSTRAN/faster-whisper/v1.2.1/faster_whisper/assets/silero_vad_v6.onnx",
+      "license_files": [
+        "LICENSES/python/faster-whisper/LICENSE",
+        "LICENSES/manual/silero-vad-v6.0/LICENSE"
+      ],
+      "file_sha256": {
+        "LICENSES/python/faster-whisper/LICENSE": "af6798135e729f8aa6c853936d037dfdea449734d26b8ea6a89805fca758c0d5",
+        "LICENSES/manual/silero-vad-v6.0/LICENSE": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b"
+      },
+      "artifact_sha256": "4cbf549b8326f60f80f2536d9eefeb450a9abe83365a098031c89719f1be17d2",
+      "upstream_license_source": "https://raw.githubusercontent.com/snakers4/silero-vad/v6.0/LICENSE"
+    },
+    {
+      "name": "Microsoft Visual C++ runtime redistributables",
+      "version": "build-dependent",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "最终 EXE 中包含 MSVC/UCRT DLL；需记录其官方再分发条款和构建来源。",
+      "source": "final PyInstaller bundle",
+      "license_files": [],
+      "file_sha256": {}
+    },
+    {
+      "name": "SQLite runtime DLL",
+      "version": "build-dependent",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "最终 EXE 中的 sqlite3.dll 与 Python 3.14.4 官方 embeddable 包不一致；需记录其实际来源、版本、许可证和哈希。",
+      "source": "final PyInstaller bundle",
+      "license_files": [],
+      "file_sha256": {}
+    }
+  ],
+  "missing": [
+    {
+      "name": "Qt for Python / Qt runtime",
+      "version": "6.12.0",
+      "reason": "尚未收齐最终打包 Qt 模块的逐模块第三方声明，且需在最终瘦身构建后重新核对 DLL 清单。"
+    },
+    {
+      "name": "PyAV and linked FFmpeg libraries",
+      "version": "19.0.2",
+      "reason": "PyAV 自身 BSD 文本已收集，但 wheel 链接的 FFmpeg 构建选项、对应许可证和源码提供方式尚未核对。"
+    },
+    {
+      "name": "CTranslate2 native runtime and Intel OpenMP",
+      "version": "4.9.0",
+      "reason": "CTranslate2 MIT 文本已收集，但随 wheel 分发的 Intel OpenMP 及其他二进制依赖声明尚未收齐。"
+    },
+    {
+      "name": "Microsoft Visual C++ runtime redistributables",
+      "version": "build-dependent",
+      "reason": "最终 EXE 中包含 MSVC/UCRT DLL；需记录其官方再分发条款和构建来源。"
+    },
+    {
+      "name": "SQLite runtime DLL",
+      "version": "build-dependent",
+      "reason": "最终 EXE 中的 sqlite3.dll 与 Python 3.14.4 官方 embeddable 包不一致；需记录其实际来源、版本、许可证和哈希。"
+    }
+  ]
+}

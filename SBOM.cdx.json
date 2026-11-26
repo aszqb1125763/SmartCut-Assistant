@@ -1,0 +1,810 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:6e90b5e8-87f5-4517-bc03-3c432dd49f97",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-25T23:33:27.336631+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "name": "SmartCut compliance generator",
+          "version": "1"
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "smartcut.python",
+        "value": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "altgraph",
+      "version": "0.17.5",
+      "bom-ref": "pkg:pypi/altgraph@0.17.5",
+      "purl": "pkg:pypi/altgraph@0.17.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "anyio",
+      "version": "4.16.0",
+      "bom-ref": "pkg:pypi/anyio@4.16.0",
+      "purl": "pkg:pypi/anyio@4.16.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "av",
+      "version": "19.0.2",
+      "bom-ref": "pkg:pypi/av@19.0.2",
+      "purl": "pkg:pypi/av@19.0.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cffi",
+      "version": "2.1.1",
+      "bom-ref": "pkg:pypi/cffi@2.1.1",
+      "purl": "pkg:pypi/cffi@2.1.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT-0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "click",
+      "version": "8.5.1",
+      "bom-ref": "pkg:pypi/click@8.5.1",
+      "purl": "pkg:pypi/click@8.5.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "colorama",
+      "version": "0.4.6",
+      "bom-ref": "pkg:pypi/colorama@0.4.6",
+      "purl": "pkg:pypi/colorama@0.4.6"
+    },
+    {
+      "type": "library",
+      "name": "ctranslate2",
+      "version": "4.9.0",
+      "bom-ref": "pkg:pypi/ctranslate2@4.9.0",
+      "purl": "pkg:pypi/ctranslate2@4.9.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "cython",
+      "version": "3.3.1",
+      "bom-ref": "pkg:pypi/cython@3.3.1",
+      "purl": "pkg:pypi/cython@3.3.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "faster-whisper",
+      "version": "1.2.1",
+      "bom-ref": "pkg:pypi/faster-whisper@1.2.1",
+      "purl": "pkg:pypi/faster-whisper@1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "filelock",
+      "version": "4.2.12",
+      "bom-ref": "pkg:pypi/filelock@4.2.12",
+      "purl": "pkg:pypi/filelock@4.2.12",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "bom-ref": "pkg:pypi/flatbuffers@25.12.19",
+      "purl": "pkg:pypi/flatbuffers@25.12.19",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache 2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "bom-ref": "pkg:pypi/fsspec@2026.9.0",
+      "purl": "pkg:pypi/fsspec@2026.9.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "h11",
+      "version": "0.16.0",
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "hf-xet",
+      "version": "1.8.0",
+      "bom-ref": "pkg:pypi/hf-xet@1.8.0",
+      "purl": "pkg:pypi/hf-xet@1.8.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpcore2",
+      "version": "2.16.2",
+      "bom-ref": "pkg:pypi/httpcore2@2.16.2",
+      "purl": "pkg:pypi/httpcore2@2.16.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "httpx2",
+      "version": "2.16.2",
+      "bom-ref": "pkg:pypi/httpx2@2.16.2",
+      "purl": "pkg:pypi/httpx2@2.16.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "huggingface-hub",
+      "version": "2.4.0",
+      "bom-ref": "pkg:pypi/huggingface-hub@2.4.0",
+      "purl": "pkg:pypi/huggingface-hub@2.4.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "idna",
+      "version": "3.20",
+      "bom-ref": "pkg:pypi/idna@3.20",
+      "purl": "pkg:pypi/idna@3.20",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "numpy",
+      "version": "2.5.5",
+      "bom-ref": "pkg:pypi/numpy@2.5.5",
+      "purl": "pkg:pypi/numpy@2.5.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nvidia-cublas-cu12",
+      "version": "12.9.2.10",
+      "bom-ref": "pkg:pypi/nvidia-cublas-cu12@12.9.2.10",
+      "purl": "pkg:pypi/nvidia-cublas-cu12@12.9.2.10",
+      "licenses": [
+        {
+          "license": {
+            "name": "LicenseRef-NVIDIA-Proprietary"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nvidia-cuda-nvrtc-cu12",
+      "version": "12.9.86",
+      "bom-ref": "pkg:pypi/nvidia-cuda-nvrtc-cu12@12.9.86",
+      "purl": "pkg:pypi/nvidia-cuda-nvrtc-cu12@12.9.86",
+      "licenses": [
+        {
+          "license": {
+            "name": "LicenseRef-NVIDIA-Proprietary"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "nvidia-cudnn-cu12",
+      "version": "9.28.1.4",
+      "bom-ref": "pkg:pypi/nvidia-cudnn-cu12@9.28.1.4",
+      "purl": "pkg:pypi/nvidia-cudnn-cu12@9.28.1.4",
+      "licenses": [
+        {
+          "license": {
+            "name": "LicenseRef-NVIDIA-Proprietary"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "onnxruntime",
+      "version": "1.32.0",
+      "bom-ref": "pkg:pypi/onnxruntime@1.32.0",
+      "purl": "pkg:pypi/onnxruntime@1.32.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT License"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "opencc-python-reimplemented",
+      "version": "0.1.7",
+      "bom-ref": "pkg:pypi/opencc-python-reimplemented@0.1.7",
+      "purl": "pkg:pypi/opencc-python-reimplemented@0.1.7",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "opencv-python-headless",
+      "version": "5.1.0.95",
+      "bom-ref": "pkg:pypi/opencv-python-headless@5.1.0.95",
+      "purl": "pkg:pypi/opencv-python-headless@5.1.0.95",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache 2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "packaging",
+      "version": "26.3",
+      "bom-ref": "pkg:pypi/packaging@26.3",
+      "purl": "pkg:pypi/packaging@26.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0 OR BSD-2-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pefile",
+      "version": "2024.8.26",
+      "bom-ref": "pkg:pypi/pefile@2024.8.26",
+      "purl": "pkg:pypi/pefile@2024.8.26",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pillow",
+      "version": "13.0.0",
+      "bom-ref": "pkg:pypi/pillow@13.0.0",
+      "purl": "pkg:pypi/pillow@13.0.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT-CMU"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pip",
+      "version": "26.3",
+      "bom-ref": "pkg:pypi/pip@26.3",
+      "purl": "pkg:pypi/pip@26.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "protobuf",
+      "version": "7.36.2",
+      "bom-ref": "pkg:pypi/protobuf@7.36.2",
+      "purl": "pkg:pypi/protobuf@7.36.2",
+      "licenses": [
+        {
+          "license": {
+            "name": "3-Clause BSD License"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyclipper",
+      "version": "1.4.0",
+      "bom-ref": "pkg:pypi/pyclipper@1.4.0",
+      "purl": "pkg:pypi/pyclipper@1.4.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pycparser",
+      "version": "3.12",
+      "bom-ref": "pkg:pypi/pycparser@3.12",
+      "purl": "pkg:pypi/pycparser@3.12",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyinstaller",
+      "version": "6.22.3",
+      "bom-ref": "pkg:pypi/pyinstaller@6.22.3",
+      "purl": "pkg:pypi/pyinstaller@6.22.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyinstaller-hooks-contrib",
+      "version": "2026.10",
+      "bom-ref": "pkg:pypi/pyinstaller-hooks-contrib@2026.10",
+      "purl": "pkg:pypi/pyinstaller-hooks-contrib@2026.10"
+    },
+    {
+      "type": "library",
+      "name": "pypinyin",
+      "version": "0.55.0",
+      "bom-ref": "pkg:pypi/pypinyin@0.55.0",
+      "purl": "pkg:pypi/pypinyin@0.55.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyside6",
+      "version": "6.12.0",
+      "bom-ref": "pkg:pypi/pyside6@6.12.0",
+      "purl": "pkg:pypi/pyside6@6.12.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyside6-addons",
+      "version": "6.12.0",
+      "bom-ref": "pkg:pypi/pyside6-addons@6.12.0",
+      "purl": "pkg:pypi/pyside6-addons@6.12.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyside6-essentials",
+      "version": "6.12.0",
+      "bom-ref": "pkg:pypi/pyside6-essentials@6.12.0",
+      "purl": "pkg:pypi/pyside6-essentials@6.12.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyside6-pdf",
+      "version": "6.12.0.140",
+      "bom-ref": "pkg:pypi/pyside6-pdf@6.12.0.140",
+      "purl": "pkg:pypi/pyside6-pdf@6.12.0.140",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyside6-webengine",
+      "version": "6.12.0.140",
+      "bom-ref": "pkg:pypi/pyside6-webengine@6.12.0.140",
+      "purl": "pkg:pypi/pyside6-webengine@6.12.0.140",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pytoshop",
+      "version": "1.2.1",
+      "bom-ref": "pkg:pypi/pytoshop@1.2.1",
+      "purl": "pkg:pypi/pytoshop@1.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD license"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pywin32-ctypes",
+      "version": "0.2.3",
+      "bom-ref": "pkg:pypi/pywin32-ctypes@0.2.3",
+      "purl": "pkg:pypi/pywin32-ctypes@0.2.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "bom-ref": "pkg:pypi/pyyaml@6.0.3",
+      "purl": "pkg:pypi/pyyaml@6.0.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "rapidocr-onnxruntime",
+      "version": "1.2.3",
+      "bom-ref": "pkg:pypi/rapidocr-onnxruntime@1.2.3",
+      "purl": "pkg:pypi/rapidocr-onnxruntime@1.2.3",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "ruff",
+      "version": "0.17.6",
+      "bom-ref": "pkg:pypi/ruff@0.17.6",
+      "purl": "pkg:pypi/ruff@0.17.6",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "setuptools",
+      "version": "84.2.1",
+      "bom-ref": "pkg:pypi/setuptools@84.2.1",
+      "purl": "pkg:pypi/setuptools@84.2.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "shapely",
+      "version": "2.2.0",
+      "bom-ref": "pkg:pypi/shapely@2.2.0",
+      "purl": "pkg:pypi/shapely@2.2.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "shiboken6",
+      "version": "6.12.0",
+      "bom-ref": "pkg:pypi/shiboken6@6.12.0",
+      "purl": "pkg:pypi/shiboken6@6.12.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "soundcard",
+      "version": "0.4.6",
+      "bom-ref": "pkg:pypi/soundcard@0.4.6",
+      "purl": "pkg:pypi/soundcard@0.4.6",
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD 3-clause"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "bom-ref": "pkg:pypi/tokenizers@0.23.3",
+      "purl": "pkg:pypi/tokenizers@0.23.3"
+    },
+    {
+      "type": "library",
+      "name": "tqdm",
+      "version": "4.70.1",
+      "bom-ref": "pkg:pypi/tqdm@4.70.1",
+      "purl": "pkg:pypi/tqdm@4.70.1",
+      "licenses": [
+        {
+          "license": {
+            "name": "MPL-2.0 AND MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "truststore",
+      "version": "0.10.5",
+      "bom-ref": "pkg:pypi/truststore@0.10.5",
+      "purl": "pkg:pypi/truststore@0.10.5",
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "bom-ref": "pkg:pypi/typing-extensions@4.16.0",
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "licenses": [
+        {
+          "license": {
+            "name": "PSF-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "Qt for Python / Qt runtime",
+      "version": "6.12.0",
+      "bom-ref": "pkg:generic/Qt for Python / Qt runtime@6.12.0",
+      "purl": "pkg:generic/Qt for Python / Qt runtime@6.12.0"
+    },
+    {
+      "type": "library",
+      "name": "ONNX Runtime native runtime",
+      "version": "1.32.0",
+      "bom-ref": "pkg:generic/ONNX Runtime native runtime@1.32.0",
+      "purl": "pkg:generic/ONNX Runtime native runtime@1.32.0"
+    },
+    {
+      "type": "library",
+      "name": "OpenCV native runtime and bundled videoio FFmpeg",
+      "version": "5.1.0.95",
+      "bom-ref": "pkg:generic/OpenCV native runtime and bundled videoio FFmpeg@5.1.0.95",
+      "purl": "pkg:generic/OpenCV native runtime and bundled videoio FFmpeg@5.1.0.95"
+    },
+    {
+      "type": "library",
+      "name": "PyAV and linked FFmpeg libraries",
+      "version": "19.0.2",
+      "bom-ref": "pkg:generic/PyAV and linked FFmpeg libraries@19.0.2",
+      "purl": "pkg:generic/PyAV and linked FFmpeg libraries@19.0.2"
+    },
+    {
+      "type": "library",
+      "name": "CTranslate2 native runtime and Intel OpenMP",
+      "version": "4.9.0",
+      "bom-ref": "pkg:generic/CTranslate2 native runtime and Intel OpenMP@4.9.0",
+      "purl": "pkg:generic/CTranslate2 native runtime and Intel OpenMP@4.9.0"
+    },
+    {
+      "type": "library",
+      "name": "CPython embeddable runtime",
+      "version": "3.14.4",
+      "bom-ref": "pkg:generic/CPython embeddable runtime@3.14.4",
+      "purl": "pkg:generic/CPython embeddable runtime@3.14.4"
+    },
+    {
+      "type": "library",
+      "name": "Silero VAD ONNX model",
+      "version": "v6 (faster-whisper 1.2.1 asset)",
+      "bom-ref": "pkg:generic/Silero VAD ONNX model@v6 (faster-whisper 1.2.1 asset)",
+      "purl": "pkg:generic/Silero VAD ONNX model@v6 (faster-whisper 1.2.1 asset)"
+    },
+    {
+      "type": "library",
+      "name": "Microsoft Visual C++ runtime redistributables",
+      "version": "build-dependent",
+      "bom-ref": "pkg:generic/Microsoft Visual C++ runtime redistributables@build-dependent",
+      "purl": "pkg:generic/Microsoft Visual C++ runtime redistributables@build-dependent"
+    },
+    {
+      "type": "library",
+      "name": "SQLite runtime DLL",
+      "version": "build-dependent",
+      "bom-ref": "pkg:generic/SQLite runtime DLL@build-dependent",
+      "purl": "pkg:generic/SQLite runtime DLL@build-dependent"
+    }
+  ]
+}

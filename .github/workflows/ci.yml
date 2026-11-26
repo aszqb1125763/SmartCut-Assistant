@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    env:
+      QT_QPA_PLATFORM: offscreen
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-dev.txt -c constraints-runtime.txt
+          python -m pip check
+      - name: Compile Python sources
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem -Recurse -File -Filter *.py | Where-Object {
+            $_.FullName -notmatch '[\\/](?:\.venv|runtime|build|dist|发布版)[\\/]'
+          }
+          python -m py_compile $files.FullName
+      - name: Run unit tests
+        run: python -m unittest discover -q
+      - name: Validate Premiere panel JavaScript
+        run: node --check .\pr_bridge\js\main.js
+

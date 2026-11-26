@@ -1,0 +1,36 @@
+name: 功能建议
+description: 提出一个有明确使用场景的新功能
+title: "[Feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用场景和问题
+      description: 说明当前工作流在哪里受阻，不要只写解决方案名称。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 已尝试的替代方式
+  - type: dropdown
+    id: area
+    attributes:
+      label: 影响范围
+      options:
+        - 素材分析与字幕
+        - 剪辑逻辑与边界
+        - Premiere 工程与插件
+        - API 与本地模型
+        - 安装、发布与文档
+        - 其他
+    validations:
+      required: true
+

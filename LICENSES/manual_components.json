@@ -1,0 +1,152 @@
+{
+  "schema": 1,
+  "scope_note": "这些 native-runtime 条目用于可选离线 EXE/_internal 分发审计。默认 GitHub Release 是 source-bootstrap 包，不携带 EXE、_internal、.venv、runtime、bin 或 models；依赖由最终用户机器从上游来源安装。下列 incomplete 项不得改成 true，直到实际离线二进制包的材料逐项核实完成。",
+  "components": [
+    {
+      "name": "Qt for Python / Qt runtime",
+      "version": "6.12.0",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "尚未收齐最终打包 Qt 模块的逐模块第三方声明，且需在最终瘦身构建后重新核对 DLL 清单。",
+      "source": "https://github.com/qtproject/pyside-pyside-setup/tree/v6.12.0",
+      "license_files": [
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/LGPL-3.0-only.txt",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/GPL-2.0-only.txt",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/GPL-3.0-only.txt",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/Qt-GPL-exception-1.0.txt",
+        "LICENSES/manual/qt-pyside-6.12.0/sources/pyside6/COPYING",
+        "LICENSES/manual/qt-pyside-6.12.0/sources/shiboken6/COPYING"
+      ],
+      "file_sha256": {
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/LGPL-3.0-only.txt": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/GPL-2.0-only.txt": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/GPL-3.0-only.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "LICENSES/manual/qt-pyside-6.12.0/LICENSES/Qt-GPL-exception-1.0.txt": "40678d338ce53cd93f8b22b281a2ecbcaa3ee65ce60b25ffb0c462b0530846b2",
+        "LICENSES/manual/qt-pyside-6.12.0/sources/pyside6/COPYING": "3700b1c56fae3813dfaaef1cba101b6ec108167f36b19f4b2cc8824cc829aa2b",
+        "LICENSES/manual/qt-pyside-6.12.0/sources/shiboken6/COPYING": "9bf82b3636570e28118ee558ddab479b8f183d3e20327b7685a7479df52d6493"
+      }
+    },
+    {
+      "name": "ONNX Runtime native runtime",
+      "version": "1.32.0",
+      "type": "native-runtime",
+      "complete": true,
+      "reason": "",
+      "source": "installed onnxruntime 1.32.0 wheel",
+      "license_files": [
+        "LICENSES/python/onnxruntime/LICENSE",
+        "LICENSES/python/onnxruntime/ThirdPartyNotices.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/python/onnxruntime/LICENSE": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674",
+        "LICENSES/python/onnxruntime/ThirdPartyNotices.txt": "bf8073fd6a112ac2a656bb60799652127e881689e51d37ad20df446cd5188b2d"
+      }
+    },
+    {
+      "name": "OpenCV native runtime and bundled videoio FFmpeg",
+      "version": "5.1.0.95",
+      "type": "native-runtime",
+      "complete": true,
+      "reason": "",
+      "source": "installed opencv-python-headless 5.1.0.95 wheel",
+      "license_files": [
+        "LICENSES/python/opencv-python-headless/LICENSE.txt",
+        "LICENSES/python/opencv-python-headless/LICENSE-3RD-PARTY.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/python/opencv-python-headless/LICENSE.txt": "edef0fac1eb08d29d34563f724742e078da2513e196133a12c6ad9ff01e26107",
+        "LICENSES/python/opencv-python-headless/LICENSE-3RD-PARTY.txt": "161002b0db58605237b44519c36b693520c43a531bb3a35c2ef0eea1842694ba"
+      }
+    },
+    {
+      "name": "PyAV and linked FFmpeg libraries",
+      "version": "19.0.2",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "PyAV 自身 BSD 文本已收集，但 wheel 链接的 FFmpeg 构建选项、对应许可证和源码提供方式尚未核对。",
+      "source": "installed av 19.0.2 wheel",
+      "license_files": [
+        "LICENSES/python/av/LICENSE.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/python/av/LICENSE.txt": "f32ebcb6007dcc05eea369b3820e6391b0a7ef1ed763f30f1aca15dfdbacbe96"
+      }
+    },
+    {
+      "name": "CTranslate2 native runtime and Intel OpenMP",
+      "version": "4.9.0",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "CTranslate2 MIT 文本已收集，但随 wheel 分发的 Intel OpenMP 及其他二进制依赖声明尚未收齐。",
+      "source": "https://github.com/OpenNMT/CTranslate2/tree/v4.9.0",
+      "license_files": [
+        "LICENSES/supplemental/python/ctranslate2/4.9.0/LICENSE"
+      ],
+      "file_sha256": {
+        "LICENSES/supplemental/python/ctranslate2/4.9.0/LICENSE": "54aa79d9fe3c09e67a16dcd95b9e88676405a6ec174efda31036983cf7672ecb"
+      }
+    },
+    {
+      "name": "CPython embeddable runtime",
+      "version": "3.14.4",
+      "type": "native-runtime",
+      "complete": true,
+      "reason": "",
+      "source": "https://www.python.org/ftp/python/3.14.4/python-3.14.4-embed-amd64.zip",
+      "license_files": [
+        "LICENSES/manual/cpython-3.14.4/LICENSE.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/manual/cpython-3.14.4/LICENSE.txt": "935cf13e19f8c31b497d20b05d73623431a226b230c3599bc30fa3348979bc68"
+      },
+      "source_sha256": "cda80a9b1e75c0f1b4f9872ca1b417f0d19bce32facc811aea9180e70fad5fb9",
+      "verified_files": [
+        "python.exe",
+        "pythonw.exe",
+        "python3.dll",
+        "python314.dll",
+        "LICENSE.txt",
+        "libcrypto-3.dll",
+        "libssl-3.dll"
+      ]
+    },
+    {
+      "name": "Silero VAD ONNX model",
+      "version": "v6 (faster-whisper 1.2.1 asset)",
+      "type": "model",
+      "complete": true,
+      "reason": "",
+      "source": "https://raw.githubusercontent.com/SYSTRAN/faster-whisper/v1.2.1/faster_whisper/assets/silero_vad_v6.onnx",
+      "license_files": [
+        "LICENSES/python/faster-whisper/LICENSE",
+        "LICENSES/manual/silero-vad-v6.0/LICENSE"
+      ],
+      "file_sha256": {
+        "LICENSES/python/faster-whisper/LICENSE": "af6798135e729f8aa6c853936d037dfdea449734d26b8ea6a89805fca758c0d5",
+        "LICENSES/manual/silero-vad-v6.0/LICENSE": "2e63e9a38b6e8fc0c7bc37ce174caca1862870856c6daf5697cfb785e925520b"
+      },
+      "artifact_sha256": "4cbf549b8326f60f80f2536d9eefeb450a9abe83365a098031c89719f1be17d2",
+      "upstream_license_source": "https://raw.githubusercontent.com/snakers4/silero-vad/v6.0/LICENSE"
+    },
+    {
+      "name": "Microsoft Visual C++ runtime redistributables",
+      "version": "build-dependent",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "最终 EXE 中包含 MSVC/UCRT DLL；需记录其官方再分发条款和构建来源。",
+      "source": "final PyInstaller bundle",
+      "license_files": [],
+      "file_sha256": {}
+    },
+    {
+      "name": "SQLite runtime DLL",
+      "version": "build-dependent",
+      "type": "native-runtime",
+      "complete": false,
+      "reason": "最终 EXE 中的 sqlite3.dll 与 Python 3.14.4 官方 embeddable 包不一致；需记录其实际来源、版本、许可证和哈希。",
+      "source": "final PyInstaller bundle",
+      "license_files": [],
+      "file_sha256": {}
+    }
+  ]
+}

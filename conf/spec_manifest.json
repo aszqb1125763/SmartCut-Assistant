@@ -1,0 +1,364 @@
+{
+ "schema": "smartcut.spec-manifest",
+ "schema_version": 1,
+ "spec_version": "2026-11-24.1",
+ "source": "01_视频坐标系.md",
+ "clauses_total": 52,
+ "counts": {
+  "done": 7,
+  "partial": 18,
+  "todo": 27
+ },
+ "completeness": 0.3077,
+ "groups": {
+  "A": {
+   "title": "声音与时间轴",
+   "total": 21,
+   "done": 5,
+   "partial": 6,
+   "todo": 10
+  },
+  "B": {
+   "title": "文字与语义",
+   "total": 13,
+   "done": 1,
+   "partial": 4,
+   "todo": 8
+  },
+  "C": {
+   "title": "画面",
+   "total": 5,
+   "done": 0,
+   "partial": 4,
+   "todo": 1
+  },
+  "D": {
+   "title": "交叉与多轨",
+   "total": 5,
+   "done": 0,
+   "partial": 1,
+   "todo": 4
+  },
+  "E": {
+   "title": "工程与流程约束",
+   "total": 8,
+   "done": 1,
+   "partial": 3,
+   "todo": 4
+  }
+ },
+ "clauses": [
+  {
+   "id": "A01",
+   "group": "A",
+   "title": "词级时间轴",
+   "status": "done"
+  },
+  {
+   "id": "A02",
+   "group": "A",
+   "title": "时间轴判节奏",
+   "status": "done"
+  },
+  {
+   "id": "A03",
+   "group": "A",
+   "title": "能量包络",
+   "status": "done"
+  },
+  {
+   "id": "A04",
+   "group": "A",
+   "title": "三频段分层",
+   "status": "todo"
+  },
+  {
+   "id": "A05",
+   "group": "A",
+   "title": "起音斜率",
+   "status": "partial"
+  },
+  {
+   "id": "A06",
+   "group": "A",
+   "title": "尾音斜率",
+   "status": "todo"
+  },
+  {
+   "id": "A07",
+   "group": "A",
+   "title": "尾音衰减时长",
+   "status": "todo"
+  },
+  {
+   "id": "A08",
+   "group": "A",
+   "title": "频谱重心",
+   "status": "done"
+  },
+  {
+   "id": "A09",
+   "group": "A",
+   "title": "高频占比",
+   "status": "done"
+  },
+  {
+   "id": "A10",
+   "group": "A",
+   "title": "浊音度",
+   "status": "partial"
+  },
+  {
+   "id": "A11",
+   "group": "A",
+   "title": "梅尔包络相似度",
+   "status": "partial"
+  },
+  {
+   "id": "A12",
+   "group": "A",
+   "title": "倍频程分布差",
+   "status": "todo"
+  },
+  {
+   "id": "A13",
+   "group": "A",
+   "title": "换气点识别",
+   "status": "todo"
+  },
+  {
+   "id": "A14",
+   "group": "A",
+   "title": "切口优先级",
+   "status": "partial"
+  },
+  {
+   "id": "A15",
+   "group": "A",
+   "title": "音高轴（预留，默认关）",
+   "status": "partial"
+  },
+  {
+   "id": "A16",
+   "group": "A",
+   "title": "正常形态分类",
+   "status": "todo"
+  },
+  {
+   "id": "A17",
+   "group": "A",
+   "title": "语音门",
+   "status": "todo"
+  },
+  {
+   "id": "A18",
+   "group": "A",
+   "title": "两层原点",
+   "status": "todo"
+  },
+  {
+   "id": "A19",
+   "group": "A",
+   "title": "极端判据",
+   "status": "todo"
+  },
+  {
+   "id": "A20",
+   "group": "A",
+   "title": "长停顿压缩",
+   "status": "todo"
+  },
+  {
+   "id": "A21",
+   "group": "A",
+   "title": "段首裁静音",
+   "status": "partial"
+  },
+  {
+   "id": "B01",
+   "group": "B",
+   "title": "局部通顺",
+   "status": "done"
+  },
+  {
+   "id": "B02",
+   "group": "B",
+   "title": "词性接续",
+   "status": "todo"
+  },
+  {
+   "id": "B03",
+   "group": "B",
+   "title": "指代消解",
+   "status": "todo"
+  },
+  {
+   "id": "B04",
+   "group": "B",
+   "title": "不可切红线",
+   "status": "partial"
+  },
+  {
+   "id": "B05",
+   "group": "B",
+   "title": "中程话题相似度",
+   "status": "todo"
+  },
+  {
+   "id": "B06",
+   "group": "B",
+   "title": "逻辑连接词保护",
+   "status": "todo"
+  },
+  {
+   "id": "B07",
+   "group": "B",
+   "title": "长链 500 字",
+   "status": "partial"
+  },
+  {
+   "id": "B08",
+   "group": "B",
+   "title": "概念分级",
+   "status": "todo"
+  },
+  {
+   "id": "B09",
+   "group": "B",
+   "title": "权重衰减",
+   "status": "todo"
+  },
+  {
+   "id": "B10",
+   "group": "B",
+   "title": "删除后校验",
+   "status": "todo"
+  },
+  {
+   "id": "B11",
+   "group": "B",
+   "title": "切口安全等级",
+   "status": "partial"
+  },
+  {
+   "id": "B12",
+   "group": "B",
+   "title": "语义断裂分级",
+   "status": "partial"
+  },
+  {
+   "id": "B13",
+   "group": "B",
+   "title": "情绪语义",
+   "status": "todo"
+  },
+  {
+   "id": "C01",
+   "group": "C",
+   "title": "亮度",
+   "status": "partial"
+  },
+  {
+   "id": "C02",
+   "group": "C",
+   "title": "色彩",
+   "status": "partial"
+  },
+  {
+   "id": "C03",
+   "group": "C",
+   "title": "结构",
+   "status": "partial"
+  },
+  {
+   "id": "C04",
+   "group": "C",
+   "title": "运动",
+   "status": "partial"
+  },
+  {
+   "id": "C05",
+   "group": "C",
+   "title": "360p 全帧轨迹",
+   "status": "todo"
+  },
+  {
+   "id": "D01",
+   "group": "D",
+   "title": "人声 × 游戏轨",
+   "status": "todo"
+  },
+  {
+   "id": "D02",
+   "group": "D",
+   "title": "人声 × 音乐轨",
+   "status": "todo"
+  },
+  {
+   "id": "D03",
+   "group": "D",
+   "title": "ASR 可信度",
+   "status": "partial"
+  },
+  {
+   "id": "D04",
+   "group": "D",
+   "title": "语速一致性",
+   "status": "todo"
+  },
+  {
+   "id": "D05",
+   "group": "D",
+   "title": "情绪对齐",
+   "status": "todo"
+  },
+  {
+   "id": "E01",
+   "group": "E",
+   "title": "选切点在人声轨",
+   "status": "todo"
+  },
+  {
+   "id": "E02",
+   "group": "E",
+   "title": "混音最后一步",
+   "status": "todo"
+  },
+  {
+   "id": "E03",
+   "group": "E",
+   "title": "两处审片",
+   "status": "partial"
+  },
+  {
+   "id": "E04",
+   "group": "E",
+   "title": "兜底",
+   "status": "done"
+  },
+  {
+   "id": "E05",
+   "group": "E",
+   "title": "量纲",
+   "status": "partial"
+  },
+  {
+   "id": "E06",
+   "group": "E",
+   "title": "顺序",
+   "status": "todo"
+  },
+  {
+   "id": "E07",
+   "group": "E",
+   "title": "判据矩阵",
+   "status": "partial"
+  },
+  {
+   "id": "E08",
+   "group": "E",
+   "title": "判据能拦",
+   "status": "todo"
+  }
+ ]
+}

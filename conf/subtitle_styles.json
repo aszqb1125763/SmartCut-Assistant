@@ -1,0 +1,16 @@
+{
+ "思源白色20号": {
+  "font": "Source Han Sans SC Medium",
+  "size": 20,
+  "color": "#FFFFFF",
+  "outline": 5,
+  "outline_color": "#101010",
+  "shadow": 2,
+  "shadow_color": "#000000",
+  "align": 2,
+  "margin_v": 46,
+  "max_chars": 11,
+  "max_lines": 1,
+  "outline_alpha": 0.0
+ }
+}

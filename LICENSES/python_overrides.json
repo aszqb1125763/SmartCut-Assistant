@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "components": [
+    {
+      "name": "ctranslate2",
+      "version": "4.9.0",
+      "source_url": "https://raw.githubusercontent.com/OpenNMT/CTranslate2/v4.9.0/LICENSE",
+      "source_sha256": "54aa79d9fe3c09e67a16dcd95b9e88676405a6ec174efda31036983cf7672ecb",
+      "source_reference": "OpenNMT/CTranslate2 tag v4.9.0",
+      "license_files": [
+        "LICENSES/supplemental/python/ctranslate2/4.9.0/LICENSE"
+      ],
+      "file_sha256": {
+        "LICENSES/supplemental/python/ctranslate2/4.9.0/LICENSE": "54aa79d9fe3c09e67a16dcd95b9e88676405a6ec174efda31036983cf7672ecb"
+      }
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "source_url": "https://raw.githubusercontent.com/google/flatbuffers/v25.12.19/LICENSE",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source_reference": "google/flatbuffers tag v25.12.19",
+      "license_files": [
+        "LICENSES/supplemental/python/flatbuffers/25.12.19/LICENSE"
+      ],
+      "file_sha256": {
+        "LICENSES/supplemental/python/flatbuffers/25.12.19/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      }
+    },
+    {
+      "name": "cython",
+      "version": "3.3.1",
+      "source_url": "https://files.pythonhosted.org/packages/99/ca/18e324972e5cac914816fdd7bb03e19a455b90039c277a538f7781b50c85/cython-3.3.1.tar.gz",
+      "source_sha256": "e0e45989e821bef6aa9ae15c7d583ab5e055f7406c4b3624e49e06d24e90375a",
+      "source_reference": "PyPI cython 3.3.1 source distribution",
+      "license_files": [
+        "LICENSES/supplemental/python/cython/3.3.1/COPYING.txt",
+        "LICENSES/supplemental/python/cython/3.3.1/LICENSE.txt"
+      ],
+      "file_sha256": {
+        "LICENSES/supplemental/python/cython/3.3.1/COPYING.txt": "e1eb1c49a8508e8173dac30157e4a6439a44ad8846194746c424fbc3fc2b95d7",
+        "LICENSES/supplemental/python/cython/3.3.1/LICENSE.txt": "9568a2b155e66ac3e0ba1fd80b52b827b9460e6cf6f233125e7cbca8e206ddc3"
+      }
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.3",
+      "source_url": "https://files.pythonhosted.org/packages/e0/7c/2cabb2174e772636683008f2c5621949b645da7d303c596589e84516a184/tokenizers-0.23.3.tar.gz",
+      "source_sha256": "cded33237c77caeef62944d32aa9a7ef42bdce2b3497e18d137e072a8c4be438",
+      "source_reference": "PyPI tokenizers 0.23.3 source distribution",
+      "license_files": [
+        "LICENSES/supplemental/python/tokenizers/0.23.3/LICENSE"
+      ],
+      "file_sha256": {
+        "LICENSES/supplemental/python/tokenizers/0.23.3/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    },
+    {
+      "name": "rapidocr-onnxruntime",
+      "version": "1.2.3",
+      "source_url": "https://raw.githubusercontent.com/RapidAI/RapidOCR/4b45d0fc8f6352cddfaf7b69f64b512e557c6118/LICENSE",
+      "source_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source_reference": "RapidAI/RapidOCR LICENSE commit 4b45d0f (2021-03-01), predates PyPI 1.2.3 release",
+      "license_files": [
+        "LICENSES/supplemental/python/rapidocr-onnxruntime/1.2.3/LICENSE"
+      ],
+      "file_sha256": {
+        "LICENSES/supplemental/python/rapidocr-onnxruntime/1.2.3/LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    }
+  ]
+}

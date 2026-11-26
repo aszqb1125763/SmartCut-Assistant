@@ -1,0 +1,14 @@
+{
+  "font": "Source Han Sans SC Medium",
+  "size": 20,
+  "color": "#FFFFFF",
+  "outline": 4,
+  "outline_color": "#101010",
+  "shadow": 2,
+  "shadow_color": "#000000",
+  "align": 2,
+  "margin_v": 190,
+  "max_chars": 15,
+  "max_lines": 1,
+  "outline_alpha": 0.0
+}

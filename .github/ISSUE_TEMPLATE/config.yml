@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全漏洞
+    url: https://github.com/aszqb1125763/SmartCut-Assistant/blob/main/SECURITY.md
+    about: 请先阅读私密报告方式，不要在公开 Issue 披露漏洞细节。
+

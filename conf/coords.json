@@ -1,0 +1,10 @@
+{
+ "schema": "smartcut.coords-conf",
+ "schema_version": 2,
+ "spec_version": "2026-11-24.1",
+ "notes": "闸门阈值（棘轮：只许收紧，不许放松——放松要写进 07_变更日志.md）。当前是 2026-11-24 02:20 的**临时放行档**：只挡住灾难级（P0>2 或相对超标>55%），等下一轮多素材测完再按实测收紧。strict 只做参考，relative 才是出片前闸门（E03）。",
+ "max_p0": 2,
+ "max_relative_over": 0.55,
+ "max_gray_ratio": 0.40,
+ "max_over_ratio": 0.60
+}

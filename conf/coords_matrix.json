@@ -1,0 +1,427 @@
+{
+ "schema": "smartcut.coords-matrix",
+ "schema_version": 1,
+ "spec_version": "2026-11-24.1",
+ "source": "_规范/02_判据表.md",
+ "notes": "判据矩阵是数据，不是 if。rows 里每行的 requires 列出它需要哪些 state 键；缺键就跳过（不猜）。",
+ "rows": [
+  {
+   "id": "M01",
+   "spec": "E07",
+   "title": "三轴连续 + 语义通 = 顺",
+   "requires": [
+    "energy_gap_db",
+    "tone_gap_hz",
+    "shape_rms_db"
+   ],
+   "when": [
+    {
+     "axis": "energy_gap_db",
+     "op": "<=",
+     "value": 5.0
+    },
+    {
+     "axis": "tone_gap_hz",
+     "op": "<=",
+     "value": 500.0
+    },
+    {
+     "axis": "shape_rms_db",
+     "op": "<=",
+     "value": 5.0
+    }
+   ],
+   "verdict": "顺",
+   "severity": "none",
+   "action": "use"
+  },
+  {
+   "id": "M02",
+   "spec": "A04/M02",
+   "title": "人声主频带 20ms 内跌 15dB + 同句中间 = 字被切",
+   "requires": [
+    "cliff_db_20ms",
+    "same_sentence"
+   ],
+   "when": [
+    {
+     "axis": "cliff_db_20ms",
+     "op": ">=",
+     "value": 15.0
+    },
+    {
+     "axis": "same_sentence",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "字被切",
+   "severity": "P0",
+   "action": "reselect"
+  },
+  {
+   "id": "M03",
+   "spec": "A20",
+   "title": "空隙 >500ms 且期间 ≤-45dB 且无词 = 停顿过长",
+   "requires": [
+    "gap_ms",
+    "silence_db",
+    "has_word"
+   ],
+   "when": [
+    {
+     "axis": "gap_ms",
+     "op": ">",
+     "value": 500.0
+    },
+    {
+     "axis": "silence_db",
+     "op": "<=",
+     "value": -45.0
+    },
+    {
+     "axis": "has_word",
+     "op": "==",
+     "value": false
+    }
+   ],
+   "verdict": "停顿过长",
+   "severity": "P0",
+   "action": "compress_to_250ms"
+  },
+  {
+   "id": "M04",
+   "spec": "A07",
+   "title": "尾音衰减 <20ms = 硬断",
+   "requires": [
+    "tail_decay_ms"
+   ],
+   "when": [
+    {
+     "axis": "tail_decay_ms",
+     "op": "<",
+     "value": 20.0
+    }
+   ],
+   "verdict": "硬断",
+   "severity": "P0",
+   "action": "reselect"
+  },
+  {
+   "id": "M05",
+   "spec": "A09",
+   "title": "高频占比前后差 ≥0.4 = 噪声介入（不是人声断）",
+   "requires": [
+    "high_ratio_gap"
+   ],
+   "when": [
+    {
+     "axis": "high_ratio_gap",
+     "op": ">=",
+     "value": 0.4
+    }
+   ],
+   "verdict": "噪声介入",
+   "severity": "P1",
+   "action": "reselect"
+  },
+  {
+   "id": "M06",
+   "spec": "A04",
+   "title": "低频带单独断、人声连续 = 背景切换",
+   "requires": [
+    "low_band_gap_db",
+    "energy_gap_db"
+   ],
+   "when": [
+    {
+     "axis": "low_band_gap_db",
+     "op": ">=",
+     "value": 12.0
+    },
+    {
+     "axis": "energy_gap_db",
+     "op": "<=",
+     "value": 5.0
+    }
+   ],
+   "verdict": "背景切换",
+   "severity": "P1",
+   "action": "keep"
+  },
+  {
+   "id": "M07",
+   "spec": "M07",
+   "title": "谷 <-42dB 且低频带连续且句末 = 自然停顿",
+   "requires": [
+    "valley_db",
+    "low_band_gap_db",
+    "sentence_end"
+   ],
+   "when": [
+    {
+     "axis": "valley_db",
+     "op": "<",
+     "value": -42.0
+    },
+    {
+     "axis": "low_band_gap_db",
+     "op": "<=",
+     "value": 12.0
+    },
+    {
+     "axis": "sentence_end",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "自然停顿",
+   "severity": "none",
+   "action": "allow"
+  },
+  {
+   "id": "M08",
+   "spec": "M08",
+   "title": "谷 <-42dB 但低频带断 = 背景轨被切断",
+   "requires": [
+    "valley_db",
+    "low_band_gap_db"
+   ],
+   "when": [
+    {
+     "axis": "valley_db",
+     "op": "<",
+     "value": -42.0
+    },
+    {
+     "axis": "low_band_gap_db",
+     "op": ">",
+     "value": 12.0
+    }
+   ],
+   "verdict": "背景轨被切断",
+   "severity": "P1",
+   "action": "add_room_tone"
+  },
+  {
+   "id": "M09",
+   "spec": "D01",
+   "title": "人声轨与游戏轨同时断崖 = 整体音频断裂",
+   "requires": [
+    "voice_cliff",
+    "game_cliff"
+   ],
+   "when": [
+    {
+     "axis": "voice_cliff",
+     "op": "==",
+     "value": true
+    },
+    {
+     "axis": "game_cliff",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "整体音频断裂",
+   "severity": "P0",
+   "action": "reselect"
+  },
+  {
+   "id": "M10",
+   "spec": "D02",
+   "title": "音乐节拍断、人声连续 = 音乐单独跳",
+   "requires": [
+    "music_beat_break",
+    "energy_gap_db"
+   ],
+   "when": [
+    {
+     "axis": "music_beat_break",
+     "op": "==",
+     "value": true
+    },
+    {
+     "axis": "energy_gap_db",
+     "op": "<=",
+     "value": 5.0
+    }
+   ],
+   "verdict": "音乐单独跳",
+   "severity": "P1",
+   "action": "music_xfade"
+  },
+  {
+   "id": "M11",
+   "spec": "A15",
+   "title": "同句内音高跳 >6 半音 = 语调断裂",
+   "requires": [
+    "pitch_jump_semitones"
+   ],
+   "when": [
+    {
+     "axis": "pitch_jump_semitones",
+     "op": ">",
+     "value": 6.0
+    }
+   ],
+   "verdict": "语调断裂",
+   "severity": "P1",
+   "action": "reselect"
+  },
+  {
+   "id": "M12",
+   "spec": "B10",
+   "title": "删除后概念失去首现 = 语义断，绝对保留",
+   "requires": [
+    "concept_lost_source"
+   ],
+   "when": [
+    {
+     "axis": "concept_lost_source",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "语义断",
+   "severity": "P0",
+   "action": "must_keep"
+  },
+  {
+   "id": "M13",
+   "spec": "B03",
+   "title": "指代落空 = 轻微断裂",
+   "requires": [
+    "pronoun_unresolved"
+   ],
+   "when": [
+    {
+     "axis": "pronoun_unresolved",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "指代落空",
+   "severity": "P1",
+   "action": "prefer_reselect"
+  },
+  {
+   "id": "M14",
+   "spec": "B06",
+   "title": "落在强逻辑词后 10 字内 = 逻辑链断",
+   "requires": [
+    "logic_word_hit"
+   ],
+   "when": [
+    {
+     "axis": "logic_word_hit",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "逻辑链断",
+   "severity": "P1",
+   "action": "reselect"
+  },
+  {
+   "id": "M15",
+   "spec": "D03",
+   "title": "有人声能量但无词 = ASR 漏识别，不能当静音删",
+   "requires": [
+    "voiced_no_word"
+   ],
+   "when": [
+    {
+     "axis": "voiced_no_word",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "ASR 漏识别",
+   "severity": "P1",
+   "action": "must_keep"
+  },
+  {
+   "id": "M16",
+   "spec": "M07",
+   "title": "接缝左侧落在静音里（切在气口）= 不算技术错误",
+   "requires": [
+    "left_silent"
+   ],
+   "when": [
+    {
+     "axis": "left_silent",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "切在气口",
+   "severity": "none",
+   "action": "allow"
+  },
+  {
+   "id": "M17",
+   "spec": "M07",
+   "title": "接缝右侧落在静音里（切在气口）= 不算技术错误",
+   "requires": [
+    "right_silent"
+   ],
+   "when": [
+    {
+     "axis": "right_silent",
+     "op": "==",
+     "value": true
+    }
+   ],
+   "verdict": "切在气口",
+   "severity": "none",
+   "action": "allow"
+  },
+  {
+   "id": "M18",
+   "spec": "E03",
+   "title": "三轴合成超限（无其他条款命中）= 接缝超标",
+   "requires": [
+    "axes_grade"
+   ],
+   "when": [
+    {
+     "axis": "axes_grade",
+     "op": "==",
+     "value": "over"
+    }
+   ],
+   "verdict": "三轴超限",
+   "severity": "P1",
+   "action": "reselect",
+   "explain": [
+    "energy_gap_db",
+    "tone_gap_hz",
+    "shape_rms_db"
+   ]
+  },
+  {
+   "id": "M19",
+   "spec": "E03",
+   "title": "三轴落在边缘区 = 可用但必须记账",
+   "requires": [
+    "axes_grade"
+   ],
+   "when": [
+    {
+     "axis": "axes_grade",
+     "op": "==",
+     "value": "edge"
+    }
+   ],
+   "verdict": "边缘",
+   "severity": "P2",
+   "action": "allow_with_note",
+   "explain": [
+    "energy_gap_db",
+    "tone_gap_hz",
+    "shape_rms_db"
+   ]
+  }
+ ]
+}

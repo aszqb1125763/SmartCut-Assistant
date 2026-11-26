@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>智能剪辑桥</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 8px; background: #1d1d1d; color: #d9d9d9;
+      font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+      font-size: 12px;
+    }
+    h1 {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 8px; font-size: 13px; margin: 0 0 6px; font-weight: 600;
+    }
+    .row { display: flex; align-items: center; margin: 5px 0; }
+    /* CEP 9 的旧 CEF 不支持 flex gap，使用普通间距保持按钮可读。 */
+    .row > * + * { margin-left: 5px; }
+    .row.compact { margin: 3px 0; }
+    button {
+      background: #2f608f; color: #eaf2fb; border: none; border-radius: 4px;
+      padding: 6px 10px; font-size: 12px; cursor: pointer;
+    }
+    button:hover { background: #3a76ad; }
+    button:disabled { background: #333; color: #666; cursor: default; }
+    button.main {
+      flex: 1; padding: 9px; font-size: 13px; font-weight: 600;
+      background: #2f7d4f;
+    }
+    .progress { height: 6px; background: #303030; border-radius: 3px; overflow: hidden; }
+    .progress > div { height: 100%; width: 0; background: #4caf72; transition: width .2s; }
+    #smartState { margin-top: 5px; color: #9a9a9a; min-height: 17px; }
+    #log {
+      margin-top: 5px; padding: 7px; height: 180px; overflow: auto;
+      background: #161616; border: 1px solid #333; border-radius: 4px;
+      font-family: Consolas, monospace; font-size: 11px; white-space: pre-wrap;
+      line-height: 1.5;
+    }
+    .dim { color: #7d7d7d; }
+    .ok { color: #4caf72; }
+    .err { color: #d05a5a; }
+    #state { color: #9a9a9a; font-size: 11px; font-weight: 400; }
+    .settings {
+      margin: 6px 0; padding: 7px; background: #242424;
+      border: 1px solid #363636; border-radius: 4px;
+    }
+    .settings-title { color: #c8c8c8; font-weight: 600; margin-bottom: 4px; }
+    label { color: #a9a9a9; white-space: nowrap; }
+    select, input[type="number"] {
+      min-width: 0; height: 28px; padding: 4px 7px; color: #e0e0e0;
+      background: #181818; border: 1px solid #484848; border-radius: 3px;
+      font-family: inherit; font-size: 12px;
+    }
+    select { flex: 1; }
+    .percent-field { display: flex; align-items: center; flex: 1; }
+    .percent-field input { flex: 1; width: 64px; }
+    .percent-field span { color: #aaa; margin-left: 6px; }
+    #audioState { min-height: 16px; color: #858585; line-height: 1.4; }
+    .track-picker { position: relative; flex: 1; min-width: 0; }
+    .track-toggle {
+      display: flex; width: 100%; height: 28px; align-items: center;
+      justify-content: space-between; padding: 4px 8px;
+      color: #e0e0e0; background: #181818; border: 1px solid #484848;
+      border-radius: 3px; text-align: left;
+    }
+    .track-toggle:hover, .track-toggle[aria-expanded="true"] {
+      background: #202020; border-color: #5d7fa0;
+    }
+    #audioTrackText { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .chevron { color: #9eb8d0; flex: none; margin-left: 8px; }
+    .track-menu {
+      position: absolute; z-index: 30; left: 0; right: 0; top: 32px;
+      max-height: 210px; overflow: auto; padding: 5px;
+      background: #202020; border: 1px solid #555; border-radius: 4px;
+      box-shadow: 0 5px 16px rgba(0, 0, 0, .45);
+    }
+    .track-menu.hidden { display: none; }
+    .track-option {
+      display: flex; align-items: center; padding: 5px 6px;
+      border-radius: 3px; color: #d4d4d4; cursor: pointer;
+    }
+    .track-option:hover { background: #303c47; }
+    .track-option > * + * { margin-left: 7px; }
+    .track-option input { flex: none; width: 14px; height: 14px; margin: 0; }
+    .track-note { margin-left: auto; color: #777; font-size: 10px; }
+    .track-divider { height: 1px; margin: 4px 2px; background: #3a3a3a; }
+    .track-empty { padding: 6px; color: #777; }
+    .field-label { width: 66px; flex: none; }
+    details.log-panel { margin-top: 6px; }
+    details.log-panel summary {
+      padding: 5px 7px; color: #9fa7ad; background: #242424;
+      border: 1px solid #353535; border-radius: 4px; cursor: pointer;
+      user-select: none;
+    }
+    details.log-panel[open] summary { border-radius: 4px 4px 0 0; }
+    #logCount { color: #6f8798; font-size: 10px; }
+    .credits { margin-top: 7px; color: #777; font-size: 10px; line-height: 1.6; }
+    .credits summary { cursor: pointer; }
+    .credits a { color: #91abc3; }
+  </style>
+</head>
+<body>
+  <h1>智能剪辑 · PR 桥 <span id="state">未连接</span></h1>
+
+  <div class="row">
+    <button id="btnConnect" style="flex:1;">连接</button>
+    <button id="btnDump" style="flex:1;">读取序列</button>
+  </div>
+
+  <div class="settings">
+    <div class="settings-title">剪辑设置</div>
+    <div class="row compact">
+      <label class="field-label" for="keepRatioPercent">保留比例</label>
+      <div class="percent-field">
+        <input id="keepRatioPercent" type="number" min="15" max="100"
+               step="1" value="75" aria-label="剪辑内容保留比例" />
+        <span>%</span>
+      </div>
+    </div>
+    <div class="row compact">
+      <label class="field-label" for="audioTrackToggle">AI 听音轨</label>
+      <div class="track-picker" id="audioTrackPicker">
+        <button id="audioTrackToggle" class="track-toggle" type="button"
+                aria-haspopup="true" aria-expanded="false">
+          <span id="audioTrackText">读取序列后选择</span><span class="chevron">▾</span>
+        </button>
+        <div id="audioTrackMenu" class="track-menu hidden">
+          <label class="track-option">
+            <input id="audioTrackAuto" type="checkbox" checked />
+            <span>自动：当前未静音轨</span>
+          </label>
+          <div class="track-divider"></div>
+          <div id="audioTrackList"><div class="track-empty">请先读取当前序列</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="row compact">
+      <label class="field-label" for="audioOutputMode">工程音轨</label>
+      <select id="audioOutputMode" aria-label="最终工程音轨模式">
+        <option value="all">保留全部原轨</option>
+        <option value="selected">只保留所选轨</option>
+      </select>
+      <button id="btnAudioSave">保存设置</button>
+    </div>
+    <div id="audioState">连接后读取当前设置</div>
+    <div class="dim">比例越低剪得越狠；长时间无人说话的空段始终会清理，不用空段凑比例。</div>
+  </div>
+
+  <div class="row">
+    <button id="btnAsr" style="flex:1;" title="只听所选音轨并生成简体/繁体 SRT，不修改时间轴">独立转写字幕</button>
+    <button id="btnStep" style="flex:1;">AI 剪一步</button>
+  </div>
+  <div class="dim">字幕转写独立运行：简繁双份、按语义断句（约 15 字），不启动剪辑角色。</div>
+
+  <div class="row">
+    <button id="btnFull" class="main">生成可编辑 PR 工程</button>
+  </div>
+
+  <div class="progress"><div id="smartProgress"></div></div>
+  <div id="smartState">完成后输出可调整切点和简繁字幕的 .prproj</div>
+
+  <details class="log-panel" id="logPanel">
+    <summary>运行日志 <span id="logCount">0 条</span></summary>
+    <div id="log"></div>
+  </details>
+
+  <details class="credits">
+    <summary>署名与贡献</summary>
+    Copyright © 2026 瓜子神教大主教、不无聊的子枫哥<br />
+    软件初版、创意提供：<a href="https://space.bilibili.com/4445859/dynamic" target="_blank">瓜子神教大主教</a><br />
+    后续全功能完善、所有剪辑模型结构提供者：<a href="https://space.bilibili.com/263271191" target="_blank">不无聊的子枫哥</a><br />
+    AI 辅助开发：DeepSeek、OpenAI Codex ·
+    <a href="./NOTICE.md" target="_blank">完整署名</a>
+  </details>
+
+  <script src="./js/CSInterface.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
